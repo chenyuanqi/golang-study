@@ -34,3 +34,10 @@ gvm use go1.8.3
 > bin 编译后生成的可执行文件（为了方便，可以把此目录加入到 $PATH 变量中，如果有多个 gopath，那么使用${GOPATH//://bin:}/bin添加所有的 bin 目录）  
 
 ### Command
+```bash
+# 更新所有的依赖包 
+$ go mod download
+# 热启动项目 
+fresh -c ./fresh.conf
+```
+
