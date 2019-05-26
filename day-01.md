@@ -39,5 +39,24 @@ gvm use go1.8.3
 $ go mod download
 # 热启动项目 
 fresh -c ./fresh.conf
+
+# Go 编译器命令
+go command [arguments]                              # go 命令 [参数]
+go build                                            # 编译包和依赖包
+go clean                                            # 移除对象和缓存文件
+go doc                                              # 显示包的文档
+go env                                              # 打印 go 的环境变量信息
+go bug                                              # 报告 bug
+go fix                                              # 更新包使用新的 api
+go fmt                                              # 格式规范化代码
+go generate                                         # 通过处理资源生成 go 文件
+go get                                              # 下载并安装包及其依赖
+go install                                          # 编译和安装包及其依赖
+go list                                             # 列出所有包
+go run                                              # 编译和运行 go 程序
+go test                                             # 测试
+go tool                                             # 运行给定的 go 工具
+go version                                          # 显示 go 当前版本
+go vet                                              # 发现代码中可能的错误
 ```
 
