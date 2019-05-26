@@ -13,4 +13,9 @@ Go 语言的另一个目标是对于网络通信、并发和并行编程的极�
 学习 go web，微服务。  
 
 ### How, golang
-First、[无闻 - Go 编程基础](https://learnku.com/docs/go-fundamental-programming)  
+First、阅读文档  
+[the-way-to-go](https://github.com/Unknwon/the-way-to-go_ZH_CN/blob/master/eBook/directory.md)  
+[无闻 - Go 编程基础](https://learnku.com/docs/go-fundamental-programming)  
+
+Second、练习 Go
+
