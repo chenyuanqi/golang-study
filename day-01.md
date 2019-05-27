@@ -58,5 +58,7 @@ go test                                             # 测试
 go tool                                             # 运行给定的 go 工具
 go version                                          # 显示 go 当前版本
 go vet                                              # 发现代码中可能的错误
+
+godoc --http=:8080                                  # 本地查看go官网
 ```
 
