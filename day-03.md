@@ -613,10 +613,8 @@ func removeColor(colors map[string]string, key string) {
 }
 ```
 
-
-**通道**
-
-- chan
+<details>
+<summary>通道 chan</summary>
 
 </details>
 
@@ -645,7 +643,7 @@ Go 的值类型与引用类型
 - 复合数据类型是由不同的方式组合基本类型构造出来的数据类型，如：数组，slice，map，结构体
 - 没有字符型，使用 byte 来保存单个字母
 
-Go 类型判断：
+Go 类型判断
 ```go
 a := 1
 fmt.Printf("%T",a);                 // 输出变量 a 的类型，int
@@ -675,26 +673,25 @@ var a bigint
 
 Go 多数据分组书写
 ```go
-    const(
-        i = 100
-        pi = 3.1415
-        prefix = "Go_"
-    )
-    
-    var(
-        i int
-        pi float32
-        prefix string
-    )
+const(
+    i = 100
+    pi = 3.1415
+    prefix = "Go_"
+)
 
+var(
+    i int
+    pi float32
+    prefix string
+)
 ```
 
 ### Var
 Go 变量声明的三种方式：
 ```go
-	var a int		    // 声明一个整形变量，默认为0
-	var b = 10		    // 声明并初始化，且自动推导类型
-	c := 20			    // 初始化，且自动推导
+var a int		    // 声明一个整形变量，默认为0
+var b = 10		    // 声明并初始化，且自动推导类型
+c := 20			    // 初始化，且自动推导
 ```
 注意：
 - `:=`定义变量只能在函数内部使用，所以经常用 var 定义全局变量
@@ -704,14 +701,14 @@ Go 变量声明的三种方式：
 
 Go 多变量同时声明
 ```go
-	var a,b string
-    var a1,b1 string = "哼","哈"
-    var a2,b2 int = 1,2             // 类型可以直接省略
-	c,d := 1,2
-	var(
-		e int
-		f bool
-	)
+var a,b string
+var a1,b1 string = "哼","哈"
+var a2,b2 int = 1,2             // 类型可以直接省略
+c,d := 1,2
+var(
+	e int
+	f bool
+)
 ```
 
 Go 的默认值机制  
