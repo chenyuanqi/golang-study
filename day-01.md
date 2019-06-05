@@ -33,6 +33,17 @@ gvm use go1.8.3
 > pkg 编译后生成的文件（比如：.a）  
 > bin 编译后生成的可执行文件（为了方便，可以把此目录加入到 $PATH 变量中，如果有多个 gopath，那么使用${GOPATH//://bin:}/bin添加所有的 bin 目录）  
 
+### Version Manager
+Go 也有支持多版本管理的工具，例如：gvm (https://github.com/moovweb/gvm)
+```
+# 安装gvm:
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+# 安装、切换go版本
+gvm install go1.8.3
+gvm use go1.8.3         # 使用参数 --default，可以每次启动不需要调用use
+```
+
 ### Command
 ```bash
 # 更新所有的依赖包 
@@ -42,6 +53,7 @@ fresh -c ./fresh.conf
 
 # Go 编译器命令
 go command [arguments]                              # go 命令 [参数]
+
 go build                                            # 编译包和依赖包
 go clean                                            # 移除对象和缓存文件
 go doc                                              # 显示包的文档
@@ -59,6 +71,8 @@ go tool                                             # 运行给定的 go 工具
 go version                                          # 显示 go 当前版本
 go vet                                              # 发现代码中可能的错误
 
-godoc --http=:8080                                  # 本地查看go官网
+godoc -http=:8080                                  # 本地查看go官网
+# 如果你的 godoc 命令不存在，运行它安装
+go get -v  golang.org/x/tools/cmd/godoc
 ```
 
