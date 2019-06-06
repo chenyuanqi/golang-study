@@ -306,6 +306,8 @@ func main() {
 <details>
 <summary>for 循环语句</summary>
 
+for 循环中声明的变量在每次循环结束都会消失，作用域只在当次循环。  
+
 ```go
 package main
 import "fmt"
@@ -401,7 +403,8 @@ func main() {
 }
 ```
 
-就像 for 循环一样，Go 的 if 语句也不要求用 ( ) 将条件括起来，同时， { } 还是必须有的。
+就像 for 循环一样，Go 的 if 语句也不要求用 ( ) 将条件括起来，同时， { } 还是必须有的。  
+如果在 if 的条件语句两边加上括号不会报错，但在 go fmt 时会自动消除。
 
 **if 的便捷语句**
 
