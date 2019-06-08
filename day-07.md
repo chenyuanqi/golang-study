@@ -39,7 +39,7 @@ golang 中的 map，key 可以是很多种类型，比如 bool, 数字，string,
 
 #### 1.2 map 的使用
 map 的读取和设置也类似 slice 一样，通过 key 来操作，只是 slice 的 index 只能是｀int｀类型，而 map 多了很多类型，可以是 int，可以是 string 及所有完全定义了 == 与 != 操作的类型。
-```
+```go
 // 声明一个key是字符串，值为int的字典,这种方式的声明需要在使用之前使用make初始化
 var numbers map[string]int
 // 另一种map的声明方式
@@ -59,9 +59,19 @@ map 的长度是不固定的，也就是和 slice 一样，也是一种引用类
 内置的 len 函数同样适用于 map，返回 map 拥有的 key 的数量  
 map 的值可以很方便的修改，通过 numbers["one"]=11 可以很容易的把 key 为 one 的字典值改为 11  
 map 和其他基本型别不同，它不是 thread-safe，在多个 go-routine 存取时，必须使用 mutex lock 机制
+```go
+lookup := map[string]int{
+  "goku": 9001,
+  "gohan": 2044,
+}
+
+for key, value := range lookup {
+  ...
+}
+```
 
 #### 1.3 删除元素
-```
+```go
 // 初始化一个字典
 rating := map[string]float32{"C":5, "Go":4.5, "Python":4.5, "C++":2 }
 // map有两个返回值，第二个返回值，如果不存在key，那么ok为false，如果存在ok为true
